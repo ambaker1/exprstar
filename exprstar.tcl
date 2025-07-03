@@ -9,7 +9,7 @@ proc ::expr* {args} {uplevel 1 "::expr {list([join $args])}"}
 package provide expr* 1.0
 
 # Example:
-if {1} {
+if {0} {
     set x 3.0
     set y 4.0
     set mylist [expr {list(double(1),double(2))}]

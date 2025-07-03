@@ -6,7 +6,7 @@
 
 proc ::tcl::mathfunc::list {args} {return $args}
 proc ::expr* {args} {uplevel 1 "::expr {list([join $args])}"}
-package provide expr* 1.0
+package provide exprstar 1.0
 
 # Example:
 if {0} {

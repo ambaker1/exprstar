@@ -4,15 +4,15 @@
 # Written by Alex Baker (ambaker1@mtu.edu).
 # See LICENSE.
 
-proc ::tcl::mathfunc::list {args} {return $args}
-proc ::expr* {args} {uplevel 1 "::expr {list([join $args])}"}
-package provide exprstar 1.0
+proc ::tcl::mathfunc::vec {args} {return $args}
+proc ::expr* {args} {uplevel 1 "::expr {vec([join $args])}"}
+package provide exprstar 2.0
 
 # Example:
-if {0} {
+if {1} {
     set x 3.0
     set y 4.0
-    set mylist [expr {list(double(1),double(2))}]
+    set mylist [expr {vec(double(1),double(2))}]
     lappend mylist {*}[expr* {$x, $y, hypot($x,$y)}]
     puts $mylist; # 1.0 2.0 3.0 4.0 5.0
 }

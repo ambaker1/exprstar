@@ -9,7 +9,7 @@ proc ::expr* {args} {uplevel 1 "::expr {vec([join $args])}"}
 package provide exprstar 2.0
 
 # Example:
-if {1} {
+if {0} {
     set x 3.0
     set y 4.0
     set mylist [expr {vec(double(1),double(2))}]
